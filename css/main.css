@@ -1,0 +1,111 @@
+.imagen {
+    max-width: 500px;
+    min-width: 150px;
+}
+
+.formulario{
+    flex-shrink: 0;
+    min-width: 300px;
+}
+
+input {
+  margin-bottom: 2em;
+}
+
+/* Los botones se animan cuando se pasa sobre ellos :hover */
+.btn:hover {        
+      transform: scale(1.1);
+}
+
+.btn {
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+  
+.btn:hover:before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+}
+.btn:before {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 100%;
+      width: 0px;
+      z-index: -1;
+      content: '';
+      color: #fff;
+      background: rgb(170, 34, 41);
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* La imagen tiene 3 tipos de animaciones: el arco que hace mov1,
+los puntos 1 y 3 que hacen mov2 y 
+el punto2 que hace rotar */
+#arco {
+  animation-name: mov1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 50% 50%;
+}
+@keyframes mov1 {
+  0% {
+    transform: scale(73%) translate(-40px,80px);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+#punto1 {
+  animation-name: mov2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 60% 33%;
+}
+#punto2 {
+  animation-name: rotar;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 60% 33%;
+}
+#punto3 {
+  animation-name: mov2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 60% 33%;
+}
+@keyframes rotar {
+  0% {
+    opacity: 0;
+    transform: rotate(25deg)  scale(5%);
+  }
+  50% {
+    transform: rotate(25deg)  scale(50%);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes mov2 {
+  0% {
+    opacity: 0;
+    transform: scale(5%);
+  }
+  50% {
+    transform: scale(10%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
