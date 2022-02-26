@@ -7,3 +7,5 @@ Tarea esta tarea se ha animado:
 Publicada en: https://3495936.github.io/login_webanimado/
 
 Repositorio: https://github.com/3495936/login_webanimadoa
+
+Además, es adaptativo a dispositivos con diferentes tamaños de pantalla.
